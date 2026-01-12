@@ -3,7 +3,6 @@
 // **Validates: Requirements 3.1, 3.2, 3.4**
 module main
 
-import hono
 import hono_docs
 import x.json2
 
@@ -441,7 +440,7 @@ fn test_round_trip_complex() bool {
 			}
 		}
 		tags: [
-			hono.OpenAPITag{
+			hono_docs.OpenAPITag{
 				name: 'users'
 				description: 'User operations'
 			}

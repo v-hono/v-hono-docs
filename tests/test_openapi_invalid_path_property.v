@@ -6,7 +6,7 @@
 // the validation error message SHALL identify the problematic path.
 module main
 
-import hono
+import meiseayoung.hono
 import hono_docs
 import rand
 import time

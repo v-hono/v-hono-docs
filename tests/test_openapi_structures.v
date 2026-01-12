@@ -1,7 +1,5 @@
 // test_openapi_structures.v - 测试 OpenAPI 数据结构
-import hono
 import hono_docs
-
 // OpenAPI 数据结构测试
 // 测试 OpenAPI 3.0/3.1 规范的数据结构定义
 
@@ -91,10 +89,10 @@ fn test_openapi_server() bool {
 
 // 测试 5: OpenAPITag 结构体
 fn test_openapi_tag() bool {
-	tag := hono.OpenAPITag{
+	tag := hono_docs.OpenAPITag{
 		name: 'users'
 		description: 'User operations'
-		external_docs: hono.OpenAPIExternalDocs{
+		external_docs: hono_docs.OpenAPIExternalDocs{
 			url: 'https://docs.example.com/users'
 			description: 'User documentation'
 		}
@@ -206,7 +204,7 @@ fn test_openapi_schema() bool {
 
 // 测试 11: OpenAPISecurityScheme 结构体
 fn test_openapi_security_scheme() bool {
-	scheme := hono.OpenAPISecurityScheme{
+	scheme := hono_docs.OpenAPISecurityScheme{
 		scheme_type: 'http'
 		description: 'Bearer token authentication'
 		scheme: 'bearer'
@@ -226,7 +224,7 @@ fn test_openapi_components() bool {
 			}
 		}
 		security_schemes: {
-			'bearerAuth': hono.OpenAPISecurityScheme{
+			'bearerAuth': hono_docs.OpenAPISecurityScheme{
 				scheme_type: 'http'
 				scheme: 'bearer'
 			}
@@ -262,7 +260,7 @@ fn test_openapi_document() bool {
 			}
 		}
 		tags: [
-			hono.OpenAPITag{
+			hono_docs.OpenAPITag{
 				name: 'users'
 			}
 		]

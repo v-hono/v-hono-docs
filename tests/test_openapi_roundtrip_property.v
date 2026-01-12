@@ -6,7 +6,6 @@
 // deserializing back SHALL produce an equivalent document.
 module main
 
-import hono
 import hono_docs
 import rand
 import time
@@ -247,8 +246,8 @@ fn generate_random_path_item() hono_docs.OpenAPIPathItem {
 }
 
 // Generate random OpenAPITag
-fn generate_random_tag() hono.OpenAPITag {
-	return hono.OpenAPITag{
+fn generate_random_tag() hono_docs.OpenAPITag {
+	return hono_docs.OpenAPITag{
 		name: random_string(3, 10)
 		description: random_string(10, 30)
 	}
@@ -272,7 +271,7 @@ fn generate_random_document() hono_docs.OpenAPIDocument {
 	
 	// Generate random number of tags (0-5)
 	num_tags := rand.int_in_range(0, 6) or { 0 }
-	mut tags := []hono.OpenAPITag{}
+	mut tags := []hono_docs.OpenAPITag{}
 	for _ in 0 .. num_tags {
 		tags << generate_random_tag()
 	}

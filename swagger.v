@@ -3,8 +3,7 @@
 // 支持 OpenAPI 3.0/3.1 规范
 module hono_docs
 
-import hono
-
+import meiseayoung.hono
 import net.http
 
 // ============================================================================

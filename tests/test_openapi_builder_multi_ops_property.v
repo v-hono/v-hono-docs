@@ -6,7 +6,7 @@
 // SHALL result in all operations being present in the final document.
 module main
 
-import hono
+import meiseayoung.hono
 import hono_docs
 import rand
 import time

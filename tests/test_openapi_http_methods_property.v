@@ -6,7 +6,7 @@
 // adding an operation with that method to a path item SHALL succeed and be preserved in the document.
 module main
 
-import hono
+import meiseayoung.hono
 import hono_docs
 import rand
 import time

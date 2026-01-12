@@ -3,7 +3,7 @@
 // **Validates: Requirements 5.1, 5.2, 5.3**
 module main
 
-import hono
+import meiseayoung.hono
 import hono_docs
 import net.http
 import rand

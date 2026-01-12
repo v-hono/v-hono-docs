@@ -7,7 +7,7 @@
 // (title in <title> tag, url in SwaggerUIBundle config, etc.).
 module main
 
-import hono
+import meiseayoung.hono
 import hono_docs
 import rand
 import time

@@ -1,4 +1,4 @@
-# hono.docs
+# meiseayoung.hono_docs
 
 API documentation tools (OpenAPI, Swagger) for v-hono-core framework.
 
@@ -12,29 +12,29 @@ API documentation tools (OpenAPI, Swagger) for v-hono-core framework.
 ## Installation
 
 ```bash
-v install hono
-v install hono.docs
+v install meiseayoung.hono
+v install meiseayoung.hono_docs
 ```
 
 ## Usage
 
 ```v
-import hono
-import hono.docs
+import meiseayoung.hono
+import meiseayoung.hono_docs
 
 fn main() {
     mut app := hono.Hono.new()
 
     // Build OpenAPI specification
-    spec := docs.OpenAPIBuilder.new()
+    spec := hono_docs.OpenAPIBuilder.new()
         .openapi('3.0.0')
         .title('My API')
         .version('1.0.0')
         .path('/users')
-            .get(docs.OpenAPIOperation{
+            .get(hono_docs.OpenAPIOperation{
                 summary: 'List users'
                 responses: {
-                    '200': docs.OpenAPIResponse{
+                    '200': hono_docs.OpenAPIResponse{
                         description: 'Success'
                     }
                 }
@@ -46,7 +46,7 @@ fn main() {
     app.doc('/doc', spec)
 
     // Serve Swagger UI
-    app.get('/ui', docs.swagger_ui(docs.SwaggerUIOptions{
+    app.get('/ui', hono_docs.swagger_ui(hono_docs.SwaggerUIOptions{
         url: '/doc'
         title: 'API Documentation'
     }))

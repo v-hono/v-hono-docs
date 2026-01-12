@@ -2,8 +2,7 @@
 // 本模块提供 OpenAPI 文档的数据结构定义，支持 OpenAPI 3.0.x 和 3.1.x 规范
 module hono_docs
 
-import hono
-
+import meiseayoung.hono
 import x.json2
 
 // ============================================================================
