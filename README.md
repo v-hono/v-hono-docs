@@ -1,4 +1,4 @@
-# meiseayoung.hono_docs
+# hono_docs
 
 API documentation tools (OpenAPI, Swagger) for v-hono-core framework.
 
@@ -12,15 +12,15 @@ API documentation tools (OpenAPI, Swagger) for v-hono-core framework.
 ## Installation
 
 ```bash
-v install meiseayoung.hono
-v install meiseayoung.hono_docs
+v install --git https://github.com/v-hono/v-hono-core
+v install --git https://github.com/v-hono/v-hono-docs
 ```
 
 ## Usage
 
 ```v
-import meiseayoung.hono
-import meiseayoung.hono_docs
+import hono
+import hono_docs
 
 fn main() {
     mut app := hono.Hono.new()
